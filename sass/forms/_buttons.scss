@@ -1,0 +1,20 @@
+
+.btn {
+	border: 1px solid rgba(255,255,255, .2);
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	@include font-size();
+	font-weight: 600;
+	height: 50px;
+	width: 210px;
+	padding-top: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .3s all ease-in-out;
+
+	&:hover {
+		background: $color__orange;
+		color: #fff;
+	}
+}

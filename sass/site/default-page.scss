@@ -1,0 +1,118 @@
+/* Default Page Template */
+.page-template-default {
+	& article {
+		display: flex;
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	& .entry-icon {
+		@include font-size(100);
+		padding: 75px 0 0 50px;
+		text-align: right;
+		width: 10%;
+	}
+
+	& .entry-content {
+		margin-top: 0;
+		padding: 90px;
+		width: 90%;
+
+		& .tagline {
+			@include font-size(40);
+		}
+
+		& .tagline-2 {
+			margin: 10px 0 20px;
+		}
+		
+		&__text {
+			@include font-size(20);
+			line-height: 1.9;
+		}
+	}
+
+}
+
+.page-template-default,
+.error404 {
+	& .header {
+		height: 120px;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	& .cta {
+		background-color: $color__orange;
+		height: 300px;
+		position: relative;
+
+		&__inner {
+			@include vertical-center();
+			width: 85%;
+		}
+
+		&__info {
+			color: #fff;
+			@include font-size(25);
+			margin-bottom: 40px;
+		}
+
+		& .btn {
+			background: #fff;
+			color: #000;
+		}
+	}
+}
+
+.error404 {
+	& main {
+		padding-top: 50px;
+		height: 70vh;
+	}
+}
+
+@media (max-width: 1200px) {
+	.page-template-default {
+		& article {
+			margin-left: 5%;
+		}
+
+		& .entry-icon {
+			width: 15%;
+		}
+
+		& .entry-content {
+			margin-top: 0;
+			padding: 90px;
+			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.page-template-default {
+		& article {
+			display: block;
+			margin-left: 0;
+
+			& .entry-icon {
+				display: none;
+			}
+
+			& .entry-content {
+				padding: 60px 25px;
+				width: 90%;
+				margin: 0 auto;
+
+				& .tagline {
+					@include font-size(22);
+					text-align: center;
+				}
+			}
+		}
+	}
+}
